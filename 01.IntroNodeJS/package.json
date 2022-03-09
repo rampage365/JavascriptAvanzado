@@ -1,0 +1,28 @@
+{
+  "name": "aprendiendo_nodejs",
+  "version": "1.0.0",
+  "description": "vamos a manejar nodejs y npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesualujan/Javascript_Avanzado.git"
+  },
+  "keywords": [
+    "javascript",
+    "npm",
+    "nodejs"
+  ],
+  "author": "G13",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesualujan/Javascript_Avanzado/issues"
+  },
+  "homepage": "https://github.com/jesualujan/Javascript_Avanzado#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
