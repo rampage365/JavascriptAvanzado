@@ -29,25 +29,68 @@ Object.keys(meteoritos.near_earth_objects).forEach(object =>{
 
 })*/
 
-
-
-const marte = async(i)=>{
-const respuestaFotos = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&camera=MAST&api_key=${keyAPI}`)
-	const fotosMarte = await respuestaFotos.json()
-//console.log(fotosMarte.photos[0].img_src)
-	var imagen = document.createElement("img")
-	imagen.id = "primeraFoto"
-	var imagenURL = fotosMarte.photos[i].img_src
-	document.getElementById("tarjeta").appendChild(imagen)
-	document.getElementById(imagen.id).src = imagenURL
-	console.log(fotosMarte.photos[i].camera.full_name)
-	console.log(fotosMarte.photos[i].rover)
-	var petiqueta=document.createElement("h2")
-	petiqueta.innerHTML = `Esta foto fue tomada  por ${fotosMarte.photos[i].rover.name} con su camara ${fotosMarte.photos[i].camera.full_name} el día ${fotosMarte.photos[i].earth_date}`
-	document.getElementById("tarjeta").appendChild(petiqueta)
+const marteConsulta = async(rover)=>{
+	const informacion = await fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/Curiosity&api_key=${keyAPI}`)
+	const info = await informacion.json()
+	console.log(info)
+}
+var roverS = ""
+function seleccion (){
+	let seleccionOpciones = document.getElementById("opcionesSeleccion")
+	roverS = seleccionOpciones.value
+	//marteConsulta(roverS)
+	console.log(roverS)
+	
 }
 
-marte(1)
+function seleccion2 (){
+	let seleccionOpciones = document.getElementById("opcionesSeleccion2")
+	var selcamera = seleccionOpciones.value
+	console.log(selcamera)
+	marte(roverS,selcamera)
+	
+	
+}
+
+
+
+
+
+const marte = async(rover,camara)=>{
+var respuestaFotos = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover.toLowerCase()}/photos?sol=1000&page=1&camera=${camara.toLowerCase()}&api_key=${keyAPI}`)
+	var {photos : fotosMarte} = await respuestaFotos.json()
+//console.log(fotosMarte.photos[0].img_src)
+	var d  = document.getElementById("tarjeta")
+	
+	while (d.firstChild) {
+  		d.removeChild(d.firstChild);
+		}
+	
+	fotosMarte.forEach((foto) =>{
+	
+	
+		document.getElementById("tarjeta").innerHTML += `
+			<div class= "relative border rounded shadow" id ="hijo">
+				<img src=${foto.img_src} alt=${foto.id} class="rounded " />
+				<div class="bg-white opacity-70 p-5 absolute bottom-0 text-black font-bold flex flex-col">
+    					<span>${foto.earth_date}</span>
+    					<span>${foto.camera.name}</span>
+    
+    						</div>
+			
+			</div>
+	`
+	
+	
+	})
+	
+}
+
+
+
+
+
+
 
 
 
