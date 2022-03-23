@@ -25,15 +25,22 @@ const listAuthors = () => {
 }
 
 // LISTAR UN AUTOR POR ID 
-
-
-
-
-
+const getAuthor = (id) => {
+    request.get(URI+id+'/', (error,response,body)=>{
+        if(response.statusCode === 200){
+            const author = JSON.parse(body)
+            console.log(author)
+        }else{
+            console.log(response.statusCode, response.statusMessage)
+            //EJEMPLO: 404 NOT FOUND
+        }
+    })
+}
 
 
 
 
 module.exports = {
-    listAuthors
+    listAuthors,
+    getAuthor
 }
