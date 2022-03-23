@@ -24,6 +24,16 @@ const listAuthors = () => {
   })
 }
 
+// LISTAR UN AUTOR POR ID 
+
+
+
+
+
+
+
+
+
 module.exports = {
     listAuthors
 }
