@@ -65,10 +65,22 @@ const createAuthor = (jsonData) => {
    }) 
 }
 
+//DELETE AUTHOR O ELIMINAR UN AUTOR
+const deleteAuthor = (id) => {
+    request.delete(URI+id+'/', (error,response,body)=> {
+        if(response.statusCode === 204){
+            console.log("EL AUTOR HA SIDO ELIMINADO EXITOSAMENTE".green)
+        }else{
+            console.log(response.statusCode, response.statusMessage.yellow)
+            // 404 NOT FOUND
+        }
+    })
+}
 
 
 module.exports = {
     listAuthors,
     getAuthor,
-    createAuthor
+    createAuthor,
+    deleteAuthor
 }
