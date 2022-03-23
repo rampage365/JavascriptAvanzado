@@ -7,7 +7,6 @@ const request = require ('request')
 var color = require ('colors')
 
 //TENER NUESTRO ENDPOINT 
-
 const URI = 'https://goodreads-devf-aaron.herokuapp.com/api/v1/authors/'
 
 
@@ -31,16 +30,45 @@ const getAuthor = (id) => {
             const author = JSON.parse(body)
             console.log(author)
         }else{
-            console.log(response.statusCode, response.statusMessage)
+            console.log("ID NO VALIDO ", response.statusCode, response.statusMessage.red)
             //EJEMPLO: 404 NOT FOUND
         }
     })
 }
 
+//CREAR UN AUTOR - USAMOS UN OBJETO CON MI INFORMACIÓN A CREAR, PARA ELLO NECESITAMOS USAR FORMATO JSON
+//const jsonSend = {
+//	"name": "Ivonne",
+//	"last_name": "Mendoza",
+//	"nacionalidad": "MX",
+//	"biography": "model",
+//	"gender": "F",
+//	"age": 25,
+//	"is_alive": true
+//}
+
+// función createAuthor (jsonData)
+const createAuthor = (jsonData) => {
+    const objConfig = {
+         url: URI, //aparatdo para crear el autor /api/v1/authors/
+         form: jsonData //la data en formato JSON
+    }
+
+   request.post(objConfig, (error,response,body)=> {
+       if(response.statusCode === 201){
+            const author = JSON.parse(body)
+            console.log("EL AUTOR FUE CREADO EXITOSAMENTE\n".green , author)
+       }else{
+        console.log(response.statusCode, response.statusMessage.magenta)
+        // 404 NOT FOUND
+       }
+   }) 
+}
 
 
 
 module.exports = {
     listAuthors,
-    getAuthor
+    getAuthor,
+    createAuthor
 }
