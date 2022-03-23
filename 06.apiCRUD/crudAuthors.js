@@ -64,6 +64,34 @@ const createAuthor = (jsonData) => {
        }
    }) 
 }
+ 
+
+
+
+//ACTUALIZAR UN AUTOR 
+const updateData = {
+    name: "Pedro",
+	last_name: "Rodriguez",
+	age: 28
+}
+
+const patchAuthor = (id, jsonData) => {
+    const objConfig = {
+        url: URI+id+'/',
+        form: jsonData
+    }
+}
+
+request.patch(objConfig, (error, response, body) => {
+    if(response.statusCode === 200) {
+        const author = JSON.parse(body)
+        console.log(author)
+    }else {
+        console.log(response.statusCode , response.statusMessage)
+        //EJEMPLO 404 NOT FOUND
+    }
+})
+
 
 //DELETE AUTHOR O ELIMINAR UN AUTOR
 const deleteAuthor = (id) => {
