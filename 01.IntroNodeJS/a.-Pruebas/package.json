@@ -1,10 +1,11 @@
 {
-  "name": "iniciando_con_node_y_git",
+  "name": "01_Intronodejs_a_Pruebas",
   "version": "0.0.1",
   "description": "Basico",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
