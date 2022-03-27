@@ -1,0 +1,26 @@
+{
+  "name": "iniciando_con_node_y_git",
+  "version": "0.0.1",
+  "description": "Basico",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rampage365/JavascriptAvanzado.git"
+  },
+  "keywords": [
+    "node",
+    "git"
+  ],
+  "author": "josue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rampage365/JavascriptAvanzado/issues"
+  },
+  "homepage": "https://github.com/rampage365/JavascriptAvanzado#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
