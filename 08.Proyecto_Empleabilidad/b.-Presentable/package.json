@@ -1,0 +1,20 @@
+{
+  "name": "b.-presentable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "indexAsteroides.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon indexAsteroides.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.2.3"
+  }
+}
