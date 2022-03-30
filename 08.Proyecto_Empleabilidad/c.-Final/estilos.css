@@ -371,7 +371,10 @@ START TABALS DE DATOS DE LOS DISCOS
         /* border-bottom: 2px solid #256dd9; */
     }
 
-    
+     .campos-table-nombre{
+        padding: 4px !important;
+    } 
+
     .thead-table{
         width: 100%;
         background-color: #009688;
@@ -382,20 +385,21 @@ START TABALS DE DATOS DE LOS DISCOS
     }
 
     .titulos-table-id{
-        width: 15%;
+        width: 12%;
     }
 
     .titulos-table-nombre{
+        
         width: 15%;
     }
     .titulos-table-anio{
-        width: 25%;
+        width: 28%;
     }
     .titulos-table-precio{
-        width: 30%;
+        width: 20%;
     }
     .titulos-table-boton{
-        width: 15%;
+        width: 25%;
     }
 
     .body-table{
@@ -406,6 +410,7 @@ START TABALS DE DATOS DE LOS DISCOS
 
     .tr-table-campos{
         height: 45px;
+        margin: 5px;
     }
 
 

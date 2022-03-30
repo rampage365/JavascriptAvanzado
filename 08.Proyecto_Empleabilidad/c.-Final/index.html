@@ -8,13 +8,24 @@
     <title>MI MEDIATECA</title>
 </head>
 <body>
-    <h1>TU PORTAL DE DISCOS</h1>
+    <h1>TU PORTAL DE ASTEROIDES</h1>
     <main id="main-general-id" class="main-general">
 
         <div class="agregar-discos">
             <form class="inputs_center" name="formagregar">
-              <h2>Agrega un Disco</h2>
-              <div class="txt_field">
+              <h2>Consultar Asteroides Cercanos</h2>
+                <div class="txt_field ">
+                    <input type="date" id="dateStart" name="date-start"
+                    value="2018-07-22"
+                    min="1900-03-08" max="2200-11-26">
+                </div>
+      
+                <div class="txt_field ">
+                <input type="date" id="dateEnd" name="date-end"
+                value="2018-07-28"
+                min="1900-03-08" max="2200-11-26">
+                </div>
+              <!-- <div class="txt_field">
                 <input type="text" id="disc-name-id" name="disc-name" class="disc-name" required>  
                 <span></span>
                 <label>Disco</label>
@@ -29,19 +40,19 @@
                 <input type="number" name="number-precio" class="number-precio" id="number-precio-id" min="0.1" max="2000" required>
                 <span></span>
                 <label>Precio</label>
-              </div>
+              </div> -->
       
               <div id="div-aviso-id" class="div-aviso">
                 <div id="aviso-id" class="ocultar">
                 </div>
               </div>
               
-              <input class="boton-agregar-disco" type="button2" value="Agregar" onclick="agregarDisco()">
+              <input class="boton-buscar-asteroides" type="button2" value="Buscar" onclick="buscarAsteroides()" >
             </form>
           </div>
 
 
-        <div class="campo-rigth">
+        <!-- <div class="campo-rigth">
             <div class="fondo-blanco">
                 <div class="formulario-buscar">  
                     <form class="inputs_center2" name="formbuscar">
@@ -61,8 +72,8 @@
                             </div>
                           </div>
                     </form>
-                </div>                
-            </div>
+                </div>               
+            </div> -->
 
             
             <div id="tabla-discos-id" class="table-responsive">
@@ -71,9 +82,9 @@
                         <tr class="tr-table-titulos">
                             <th class="titulos-table-id">id</th>
                             <th class="titulos-table-nombre">Nombre</th>
-                            <th class="titulos-table-anio">Fecha de Aproximacion</th>
-                            <th class="titulos-table-precio">Diametro m</th>
-                            <th class="titulos-table-boton">Accion</th>
+                            <th class="titulos-table-anio">Primer Avistamiento</th>
+                            <th class="titulos-table-precio">Diametro (metros)</th>
+                            <th class="titulos-table-boton">Proximo Avistamiento</th>
                         </tr>
                     </thead>
                     <tbody id="body-table-id" class="body-table">
