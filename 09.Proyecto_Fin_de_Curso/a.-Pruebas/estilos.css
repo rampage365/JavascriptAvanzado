@@ -1,0 +1,608 @@
+body{
+    background-color: #fff;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-family: "San Francisco";
+    font-weight: 800;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "San Francisco";
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+
+/*****************
+    NAVBAR 
+******************/
+
+
+
+
+@media (min-width: 580px) and (max-width: 2000px) {
+    
+    .navbar-movil{
+        display: none;
+    }
+
+    .navbar-desktop{
+        position: fixed;
+        
+        z-index: 1;
+    }
+
+
+
+}
+
+@media (min-width: 300px) and (max-width: 580px) {
+    .navbar-movil{
+        width: 100%;
+        display: flex;
+        
+    }
+    .navbar-desktop{
+        display: flex;
+        display: none;
+        margin-bottom: 10em;
+
+    }
+
+
+    .grid-navbar-responsive-movil{
+        width: 100%;
+    }
+    .navbar-left-movil{
+        display: flex;
+        margin-top: 1em;
+    }
+
+
+    .inicio-pinterest-movil{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+        color: black;
+        
+    }
+
+    .inicio-pinterest-movil a{
+        text-decoration: none;
+        color: black;
+        padding-bottom: 0.5em;
+        border-bottom: 3px solid #000000;
+        
+    }
+
+
+    .hoy-pinterest-movil{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+        margin-left: 1.1em;
+        text-decoration: none;
+        color: black;
+    }
+
+    .hoy-pinterest-movil a{
+        text-decoration: none;
+        color: black;
+        padding-bottom: 0.5em;
+    }
+
+
+
+
+    .container-flotante{
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        position: fixed;
+        bottom: 20px;
+        z-index: 1;
+        width:100%;
+    }
+    .btn-mas div{
+        display: flex;
+        text-decoration: none;
+        background: #cc2b2b;
+        color: #fff;
+        width: 350px;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        border-radius: 35px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+        transition: all 500ms ease;
+    }
+
+
+    
+
+}
+
+
+
+
+nav{
+    display: flex;
+    background-color: #fff;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+    margin-left: 1.0em;
+    margin-right: 1.0em;
+  }
+
+.grid-navbar-responsive{
+    width: 100%;
+
+}
+
+.navbar-responsive{
+    
+	background: #fff;
+    color: black;
+    display:inline-block;
+    margin: 1.2em 0em 1.2em 0em;
+    text-decoration: none;
+    
+}
+
+.navbar-responsive:hover{
+    text-decoration: none;
+    background: #ddd;
+    color: black;
+  }
+
+
+/****  NAVBAR LEFT****/
+.navbar-left{
+    display: flex;
+    width: 240px;
+  }
+
+.logo-pinterest{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.logo-pinterest a{
+    text-decoration: none;
+}
+.logo-pinterest img{
+  width: 35px;
+  height: 35px;
+}
+
+.inicio-pinterest{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 75px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: black;
+}
+.inicio-pinterest a{
+    text-decoration: none;
+    font-weight: 980;
+    color: white;
+}
+.inicio-pinterest:hover{
+    background-color: black;
+}
+    
+.hoy-pinterest{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 65px;
+    height: 45px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.hoy-pinterest a{
+    text-decoration: none;
+    color: black;
+}
+/****END  NAVBAR LEFT****/
+
+/****  NAVBAR CENTER****/
+.navbar-center{
+    background-color: #fff;
+    width: 100%;
+}
+
+input {
+    margin:4px 0px 1px 0px;
+      font:inherit;
+  }
+  
+  form {
+      margin: auto;
+  }
+  
+  form > div {
+      display: flex;
+      background:#fff;
+      padding: 9px 22px 9px 12px;
+      border-radius: 30px;
+    background-color:#f0f0f0;
+  }
+  
+  form > div:hover {
+      background:#d0d0d0;
+  }
+  
+  form input {
+      border:none;
+      background: transparent;
+      font-weight: bold;
+      padding-left: 24px;
+      background-image: url(https://image.flaticon.com/icons/png/512/116/116836.png);
+      background-size: 17px;
+      background-repeat: no-repeat;
+  }
+  
+  form input:hover {
+      background: rgb(236,242,248);
+    border:none;
+      background: transparent;
+      font-weight: bold;
+      padding-left: 24px;
+    background-image:   url(https://image.flaticon.com/icons/png/512/116/116836.png);
+    background-size: 17px;
+      background-repeat: no-repeat;
+  }
+  
+  form input{
+    width:auto;
+    height:auto;
+    outline: none;
+  }
+  
+  form input:focus{
+    background: rgb(236,242,248);
+    border:none;
+      background: transparent;
+      font-weight: bold;
+      padding-left: 24px;
+    background-size: 17px;
+      background-repeat: no-repeat;
+  }
+
+/**** END NAVBAR CENTER****/
+
+/****  NAVBAR RIGTH****/
+.navbar-rigth{
+    display: flex;
+    width: 180px; 
+    margin-left: 0.5em;
+    justify-content:center;
+    align-items:center;
+}
+
+.noti-pinterest{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    flex-direction:row;
+    color: #6c757d;
+}
+.svg-bell{
+    width: 23px;
+    height: 23px;
+}
+
+
+.sms-pinterest{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    flex-direction:row;
+    color: #6c757d;
+}
+.svg-sms{
+    width: 23px;
+    height: 23px;
+}
+
+.user-pinterest{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-direction:row;
+    overflow: hidden;
+}
+
+
+  .user-pinterest a{
+      text-decoration: none;
+  }
+  .user-pinterest img{
+    width: 34px;
+    height: 34px;
+  }
+
+
+
+
+.dropdown-pinterest{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+    /*flex-direction:row;*/
+}
+
+.svg-dropdown-pinterest{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/****END  NAVBAR LEFT****/
+
+/*********************
+    END NAVBAR 
+*********************/
+
+
+/*********************
+    GRID FLEX IMG
+*********************/
+
+.grid-container{   
+    columns: 8 210px;
+    column-gap: 2em;
+    margin-bottom: 2em;  
+    
+    
+}
+
+
+
+.container{    
+    max-width: 100%;
+    max-height: 99%;
+    display: block;
+    border-radius: 15px;
+    cursor: zoom-in;
+    background-color: lightgray;
+    
+       
+}
+
+/****HOVER IMG****/
+
+    .grid-container{
+        padding: 6em 3.5em 0px 3.5em;
+
+    }
+    .contenedor figure{
+       position:relative;
+        /*height: 250px;*/
+        cursor: pointer;
+        /*width: 350px;*/
+        width: 100%;
+        height: 100%;
+        /*overflow: hidden;*/
+        border-radius: 6px;
+        /*box-shadow: rgba(0,0,0,0.50);*/
+        margin: 0px 0px 1em 0px;
+        padding: 0px;
+      
+    }
+
+    .contenedor figure img{
+        width: 100%;
+        height: 100%;
+            outline: 1px solid #fff;
+    outline-offset: -4px;
+        transition: all 400ms ease-out;
+        will-change: transform;
+        border-radius: 15px;
+    }
+
+    .contenedor figure .container{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(19 20 20 / 49%);
+        /*transition: all 100ms ease-out;*/
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+
+    .contenedor figure:hover > .container {
+        opacity: 1;
+        visibility: visible;
+    }
+ 
+    .container{
+    
+    display: flex;
+    position: relative;
+    /*border: 2px solid pink;*/
+    
+    flex-flow:column wrap;
+    justify-content:space-between;
+    align-items:center;
+    }
+
+/****END  HOVER IMG****/
+
+/****GRID HOVER****/
+.div-top{
+  margin-top:15px;
+  align-items:flex-end;
+  display: flex;
+  width:90%;
+  /*border: 2px solid pink;*/
+  justify-content:space-between;
+}
+
+.sup-izq{
+  
+    width: 110px;
+    height: 50px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 30px;
+    /*background-color: #f30b2e;*/
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.svg-dropdown-guardar{
+    color: #fff;
+    font-weight: 900;
+    width: 13px;
+    height: 13px;
+}
+.sup-izq:hover{
+    cursor:pointer;
+
+}
+.sup-derecho{
+  
+    /*background-color: green;*/
+    width: 85px;
+    height: 50px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 30px;
+    background-color: #f30b2e;
+    text-decoration: none;
+    font-weight: 980;
+    color: white;
+}
+.sup-derecho:hover{
+    background-color: #c90523;
+    cursor:pointer;
+}
+
+
+
+.inf-izq{
+    display: flex;
+    justify-content:center;
+      align-items:center;
+      overflow: hidden;
+      border-radius: 30px;
+    width: 110px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.658);
+}
+.svg-link{
+    width: 12px;
+    height: 12px;
+    
+}
+.one-inf-izq{
+    display: flex;
+    justify-content:center;
+      align-items:center;
+     
+}
+.two-inf-izq{
+    font-size: 13px;
+    color: black;
+    display: flex;
+    justify-content:center;
+      align-items:center;
+    margin-left: 0.5em;
+}
+
+.inf-izq:hover{
+    background:#fff;
+    cursor:pointer;
+}
+
+
+.inf-centro{
+    display: flex;
+    justify-content:center;
+      align-items:center;
+      overflow: hidden;
+      border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.658);
+}
+
+.inf-centro:hover{
+    background:#fff;
+    cursor:pointer;
+}
+.svg-upload{
+    width: 18px;
+    height: 16px;
+    
+}
+
+
+.inf-derecho{
+  display: flex;
+  justify-content:center;
+    align-items:center;
+    overflow: hidden;
+    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.658);
+}
+
+.inf-derecho:hover{
+    background:#fff;
+    cursor:pointer;
+}
+.svg-mas{
+    width: 20px;
+    height: 20px;
+    
+}
+
+
+.div-bottom{
+  width:90%;
+  display: flex;
+  justify-content:space-between;
+  /*border: 2px solid pink;*/
+  margin-bottom:17px;
+}
+/****END  GRID HOVER****/
+
+/*********************
+    END GRID FLEX IMG
+*********************/
